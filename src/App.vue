@@ -1,6 +1,13 @@
 <script setup>
 import { ref } from 'vue';
 const count = ref(0);
+
+const addCount=()=>{
+  count.value = count.value +1;
+};
+const minusCount=()=>{
+  count.value=count.value-1;
+}
 </script>
 
 <template>
@@ -11,10 +18,10 @@ const count = ref(0);
 
       <h1>counter</h1>
 
-      <span> <button @click="count++" class="add">+
+      <span> <button @click="addCount" class="add">+
         </button> </span> <span>
         <h4 class="count">{{ count }}</h4>
-      </span> <span><button @click="count--" class="minus">-</button></span>
+      </span> <span><button @click="minusCount" class="minus">-</button></span>
 
     </div>
 
